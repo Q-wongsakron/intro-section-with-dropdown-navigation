@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en" class="m-0 box-border p-0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body class="font-epilogue">
+    <nav
+      class="m-3 flex justify-between md:m-0 md:mx-5 md:items-center md:justify-start md:gap-4"
+    >
+      <h1 class="text-3xl font-bold">snap</h1>
+      <button
+        id="menu-botton"
+        class="menu-icon hidden-md bg-[url('/images/icon-menu.svg')]"
+      ></button>
+      <div
+        id="menu"
+        class="absolute right-0 top-0 hidden h-auto w-9/12 bg-white p-4 shadow-lg md:relative md:flex md:w-full md:items-center md:justify-between md:shadow-none"
+      >
+        <button
+          id="close-button"
+          class="close-button hidden-md absolute right-4 top-4 bg-[url('/images/icon-close-menu.svg')] bg-contain bg-center bg-no-repeat"
+        ></button>
+        <ul class="mt-14 md:m-0 md:flex md:flex-grow md:items-center md:gap-8">
+          <li class="group relative">
+            <a href="#" class="flex items-center gap-2" id="arrow-list">
+              Features
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="Dropdown arrow"
+                class="h-1 w-2"
+                id="img-arrow"
+              />
+            </a>
+            <ul class="menu-list hidden">
+              <li class="menu-item flex items-center gap-3">
+                <img
+                  src="images/icon-todo.svg"
+                  alt="Todo icon"
+                  class="h-5 w-4"
+                />
+                <a href="#">Todo List</a>
+              </li>
+              <li class="menu-item flex items-center gap-3">
+                <img
+                  src="images/icon-calendar.svg"
+                  alt="Calendar icon"
+                  class="h-4 w-4"
+                />
+                <a href="#">Calendar</a>
+              </li>
+              <li class="menu-item flex items-center gap-3">
+                <img
+                  src="images/icon-reminders.svg"
+                  alt="Reminders icon"
+                  class="h-5 w-4"
+                />
+                <a href="#">Reminders</a>
+              </li>
+              <li class="menu-item flex items-center gap-3">
+                <img
+                  src="images/icon-planning.svg"
+                  alt="Planning icon"
+                  class="h-4 w-4"
+                />
+                <a href="#">Planning</a>
+              </li>
+            </ul>
+          </li>
+          <li class="my-6">
+            <a href="#" class="flex items-center gap-2" id="arrow-list">
+              Company
+              <img
+                src="images/icon-arrow-down.svg"
+                alt="arrow down"
+                class="h-1 w-2"
+                id="img-arrow"
+              />
+            </a>
+            <ul class="menu-list hidden">
+              <li class="menu-item"><a href="#">History</a></li>
+              <li class="menu-item"><a href="#">Our Team</a></li>
+              <li class="menu-item"><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li class="my-6">
+            <a href="#">Careers</a>
+          </li>
+          <li class="my-6">
+            <a href="#">About</a>
+          </li>
+        </ul>
+
+        <div class="md:flex md:gap-4">
+          <button class="mx-auto my-0 block md:justify-self-end">Login</button>
+          <button
+            class="mx-auto my-0 mt-3 block h-10 w-10/12 rounded-xl border-2 border-black md:m-0 md:w-auto md:px-3"
+          >
+            Register
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main
+      class="md:mx-20 md:my-5 md:grid md:h-auto md:w-auto md:grid-cols-2 md:grid-rows-1 md:gap-20"
+    >
+      <picture class="order-1 md:order-2">
+        <source
+          srcset="images/image-hero-desktop.png"
+          media="(min-width:769px)"
+        />
+        <img
+          src="images/image-hero-mobile.png"
+          alt="hero"
+          class="md:max-h-[660px] md:w-auto"
+        />
+      </picture>
+      <article class="order-2 m-3 text-center md:order-1 md:text-start">
+        <h2
+          class="my-10 text-3xl font-bold md:mt-7 md:text-5xl lg:mt-20 lg:text-8xl"
+        >
+          Make remote work
+        </h2>
+        <p class="md:mt-10">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button
+          class="m-5 rounded-xl bg-black px-4 py-2 font-medium text-white md:ml-0 md:mt-10"
+        >
+          Learn more
+        </button>
+
+        <section class="my-5 grid grid-cols-4 grid-rows-1 gap-4 md:mt-10">
+          <img src="images/client-databiz.svg" alt="databiz" />
+          <img src="images/client-audiophile.svg" alt="audiophile" />
+          <img src="images/client-meet.svg" alt="meet" />
+          <img src="images/client-maker.svg" alt="maker" />
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
+<script>
+  const menuButton = document.getElementById("menu-botton");
+  const closeButton = document.getElementById("close-button");
+  const menu = document.getElementById("menu");
+
+  const arrowList = Array.from(document.querySelectorAll("#arrow-list"));
+  const menuList = Array.from(document.querySelectorAll(".menu-list"));
+  const imgArrow = Array.from(document.querySelectorAll("#img-arrow"));
+
+  menuButton.addEventListener("click", () => {
+    menu.classList.remove("hidden");
+    closeButton.classList.remove("hidden");
+  });
+
+  closeButton.addEventListener("click", () => {
+    menu.classList.add("hidden");
+    closeButton.classList.add("hidden");
+  });
+
+  // Toggle dropdown menus when clicking an arrow
+  arrowList.forEach((arrow, index) => {
+    arrow.addEventListener("click", () => {
+      menuList[index].classList.toggle("hidden");
+      if (menuList[index].classList.contains("hidden")) {
+        imgArrow[index].src = "images/icon-arrow-down.svg";
+      } else {
+        imgArrow[index].src = "images/icon-arrow-up.svg";
+      }
+    });
+  });
+</script>

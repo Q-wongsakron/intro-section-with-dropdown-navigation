@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+
+    .menu-icon {
+        @apply w-10 h-10 bg-no-repeat bg-center bg-contain;
+    }
+    
+    .hidden-md {
+        @apply md:hidden;
+    }
+    
+    .menu-list {
+        @apply block mx-6;
+    }
+    
+    .menu-item {
+        @apply my-3;
+    }
+    
+    .menu-container {
+        @apply absolute top-0 right-0 bg-white shadow-lg p-4 w-9/12 h-auto;
+    }
+    
+    .close-button {
+        @apply w-10 h-10 top-4 right-4 cursor-pointer;
+    }
+}
